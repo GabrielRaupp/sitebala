@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let index = 0;
 
-
         imgs.forEach((img, i) => {
             img.style.display = i === 0 ? "block" : "none";
         });
-
 
         const container = document.createElement("div");
         container.classList.add("btn-container");
@@ -19,10 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const btnPrev = document.createElement("button");
         btnPrev.classList.add("btn-prev");
         btnPrev.textContent = "<";
+        btnPrev.setAttribute("aria-label", "Imagem anterior");
 
         const btnNext = document.createElement("button");
         btnNext.classList.add("btn-next");
         btnNext.textContent = ">";
+        btnNext.setAttribute("aria-label", "Próxima imagem");
 
         container.appendChild(btnPrev);
         container.appendChild(btnNext);
